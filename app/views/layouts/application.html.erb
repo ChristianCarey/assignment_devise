@@ -12,6 +12,9 @@
     <% flash.each do |type, error| %>
       <p><%= error %></p>
     <% end %>
+    <ul>
+      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+    </ul>
     <%= yield %>
   </body>
 </html>
